@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+html {
+    background: linear-gradient(90deg, #000000 -14.9%, #140e5f 100%);
+}
+/*  Create one pink box and one blue box, both 200x200 one on the left and one on the right. if the screen is a mobile screen, then make the boxes stack vertically */
+
+/*  Create a button that when clicked, will change the color of the box to red.
+/* Create a button that when clicked, changes the background color of the box to red. */
+
+
+.drag-area {
+    border: 2px dashed #fff;
+    height: 500px;
+    width: 700px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.drag-area.active {
+    border: 2px solid #fff;
+}
+
+.drag-area .icon {
+    font-size: 100px;
+    color: #fff;
+}
+
+.drag-area header {
+    font-size: 30px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.drag-area span {
+    font-size: 25px;
+    font-weight: 500;
+    color: #fff;
+    margin: 10px 0 15px 0;
+}
+
+.drag-area button {
+    padding: 10px 25px;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    background: #fff;
+    color: #5256ad;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.drag-area img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.parent {
+    display: flex;
+    justify-content: space-between;
+    /* flex-direction: column; */
+    align-items: center;
+    gap: 2rem;
+}
+.inserto {
+    width: 30vw;
+    height: 30vw;
+    background: linear-gradient(225.69deg,
+            rgba(79, 186, 241, 0.25) 0%,
+            #4fbaf1 100%);
+    border-radius: 4vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.out {
+    
+    width: 30vw;
+    height: 30vw;
+
+    background: linear-gradient(135.31deg,
+            rgba(244, 174, 199, 0.25) 0%,
+            #f4aec7 61.4%,
+            #f4aec7 100%);
+    border-radius: 4vw;
+}
+.ctext {
+    color: white;
+    text-align: center;
+    margin-top: 30%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2vw;
+
+
+}
+.arrow{
+    max-width: 20%;
+
+
+}
+
+.col-1 {
+    width: 20%;
+}
+
+.col-2 {
+    width: 20%;
+}
+
+.col-3 {
+    width: 60%;
+}
+
+.col-4 {
+    width: 80%;
+}
+
+.col-5 {
+    width: 100%;
+}
+
+ 
+
+.navbar {
+    font-family: Roboto, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 40px;
+}
+
+.logo {
+    max-width: 100px;
+    padding: 1%;
+}
+
+.hidden {
+    display: none;
+}
+
+* {
+    box-sizing: border-box;
+  }
+
+
+  
+@media only screen and (max-width: 700px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+      width: 100%;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+ 
+    
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    padding: 8px;
+
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: #111;
+  }
+  
+  .active {
+    background-color: #04AA6D;
+  }
+  .centered{
+    display: flex;
+        align-items: center;
+        justify-content: center;
+  }
+  .kbutton{
+    height: 100px;
+    width: 100px;
+
+    /* set the button to an image */
+    background-image: url("/frontend/static/images/20829.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 10;
+    /* background: #04AA6D; */
+
+  }
+  @media only screen and (max-width: 800px) {
+    .parent {
+            display: flex;
+            /* justify-content: space-between; */
+            flex-direction: column;
+            align-items: center;
+            gap: 5rem;
+        }
+        .inserto {
+            width: 50vw;
+            height: 50vw;
+            background: linear-gradient(225.69deg,
+                    rgba(79, 186, 241, 0.25) 0%,
+                    #4fbaf1 100%);
+            border-radius: 4vw;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    
+        .out {
+    
+            width: 50vw;
+            height: 50vw;
+    
+            background: linear-gradient(135.31deg,
+                    rgba(244, 174, 199, 0.25) 0%,
+                    #f4aec7 61.4%,
+                    #f4aec7 100%);
+            border-radius: 4vw;
+        }
+        .arrow {
+            max-width: 20%;
+            transform: rotate(90deg);
+            /* reflect image in y axis */
+            transform-origin: center;
+
+        }
+    
+  }

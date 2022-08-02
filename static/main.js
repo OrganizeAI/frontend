@@ -83,7 +83,7 @@ function showFile() {
   text.classList.add("hidden");
   icon.classList.add("hidden");
   let fileType = file.type; //getting selected file type
-  let validExtensions = ["image/jpeg", "image/jpg", "image/png"]; //adding some valid image extensions in array
+  let validExtensions = ["image/jpeg", "image/jpg", "image/png", "image/webp"]; //adding some valid image extensions in array
   if (validExtensions.includes(fileType)) {
     //if user selected file is an image file
     let fileReader = new FileReader(); //creating new FileReader object
@@ -113,7 +113,7 @@ sre.addEventListener("click", () => {
 
   // send request and print response
   formData.append("file", inpust.files[0]);
-  fetch("http://localhost:9000/ultimate", {
+  fetch("http://localhost:1234/detecturl", {
     method: "POST",
     body: formData,
   })
@@ -124,5 +124,6 @@ sre.addEventListener("click", () => {
       // set the background image of the element named out to the responseJson["url"]
       console.log(out);
       out.style.backgroundImage = `url(${responseJson["url"]})`;
+      out.li;
     });
 });

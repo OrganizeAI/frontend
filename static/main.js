@@ -7,7 +7,7 @@
  */
 // @ts-ignore
 const dropArea = document.querySelector(".drag-area");
-
+const out = document.querySelector(".out");
 /**
  * @type HTMLButtonElement
  */
@@ -20,6 +20,8 @@ const button = dropArea.querySelector("button");
 // @ts-ignore
 const text = dropArea.querySelector(".ctext");
 
+const icon = document.querySelector(".kbutton");
+
 /**
  * @type HTMLInputElement
  */
@@ -30,6 +32,9 @@ const input = dropArea.querySelector("input");
  * @type File
  */
 let file;
+
+// get element with id "sre"
+const sre = document.getElementById("sre");
 
 // button.onclick = () => {
 //   input.click(); //if user click on the button then the input also clicked
@@ -76,6 +81,7 @@ dropArea.addEventListener("drop", (event) => {
 function showFile() {
   input.classList.add("hidden");
   text.classList.add("hidden");
+  icon.classList.add("hidden");
   let fileType = file.type; //getting selected file type
   let validExtensions = ["image/jpeg", "image/jpg", "image/png"]; //adding some valid image extensions in array
   if (validExtensions.includes(fileType)) {
@@ -92,3 +98,31 @@ function showFile() {
     // dragText.textContent = "Drag & Drop to Upload File";
   }
 }
+
+// @ts-ignore
+// when  button with id "sre" is clicked send image in input tag to localhost:9000/upload
+var inpust;
+// @ts-ignore
+sre.addEventListener("click", () => {
+  inpust = document.querySelector('input[type="file"]');
+  // @ts-ignore
+  console.log(inpust.files);
+  console.log("click");
+  const formData = new FormData();
+  // @ts-ignore
+
+  // send request and print response
+  formData.append("file", inpust.files[0]);
+  fetch("http://localhost:9000/ultimate", {
+    method: "POST",
+    body: formData,
+  })
+    .then((response) => response.json())
+    .then((responseJson) => {
+      console.log(responseJson);
+      console.log(responseJson[1]);
+      // set the background image of the element named out to the responseJson["url"]
+      console.log(out);
+      out.style.backgroundImage = `url(${responseJson["url"]})`;
+    });
+});

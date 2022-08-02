@@ -87,6 +87,8 @@ html {
             #f4aec7 61.4%,
             #f4aec7 100%);
     border-radius: 4vw;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .ctext {
     color: white;
@@ -97,12 +99,36 @@ html {
 
 
 }
-.arrow{
-    max-width: 20%;
+.dtext {
+    color: white;
+    text-align: center;
+    margin-top: 17%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2vw;
+    font-size: smaller;
 
 
 }
+.arrow{
+    max-width: 20%
 
+
+}
+.detect{
+    /* Rectangle 4 */
+    
+        width: 100px;
+        height: 50px;
+
+        background: linear-gradient(180deg, rgba(74, 172, 224, 0.79) 0%, rgba(244, 174, 199, 0.79) 100%);
+        mix-blend-mode: normal;
+        border-radius: 37px;
+
+}
+.detect:hover{
+    background: linear-gradient(180deg, rgba(255, 125, 170, 0.79) 0%, rgba(31, 177, 255, 0.79) 100%);
+
+}
 .col-1 {
     width: 20%;
 }
@@ -127,7 +153,8 @@ html {
 
 .navbar {
     font-family: Roboto, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 40px;
+    font-size: 20px;
+    padding-bottom: 10px;
 }
 
 .logo {
@@ -210,7 +237,7 @@ html {
         .inserto {
             width: 50vw;
             height: 50vw;
-            background: linear-gradient(225.69deg,
+            background: linear-gradient(180deg,
                     rgba(79, 186, 241, 0.25) 0%,
                     #4fbaf1 100%);
             border-radius: 4vw;
@@ -223,7 +250,7 @@ html {
             width: 50vw;
             height: 50vw;
     
-            background: linear-gradient(135.31deg,
+            background: linear-gradient(180deg,
                     rgba(244, 174, 199, 0.25) 0%,
                     #f4aec7 61.4%,
                     #f4aec7 100%);
@@ -232,8 +259,6 @@ html {
         .arrow {
             max-width: 20%;
             transform: rotate(90deg);
-            /* reflect image in y axis */
-            transform-origin: center;
 
         }
     
